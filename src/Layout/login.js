@@ -6,7 +6,7 @@ export default function Login(){
 
     return(
         <nav >
-            <div className="modal">
+            <div className="modal is-active">
                 <div className="modal-background" />
                 <div className="modal-content backgroundblue" style={{width: '25%', height: '50%', borderRadius: "25px"}} >
                     <div className="has-text-centered has-background-light">
