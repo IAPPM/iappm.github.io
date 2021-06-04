@@ -19,8 +19,6 @@ let colorsRandom = [] //Resultado de todas as random colors gerado.
 let title = "" //Titulo do grafico.
 const getTitle = (t) => {title = t}
 
-let worldContPorcentagem = [] //Varivel que vai armazenar o array com a porcentagem da repetição
-
 
 const randomColor = () => {
     let r = Math.floor(Math.random() * 255) ; //gera um valor para o R do RGB
@@ -32,7 +30,7 @@ const randomColor = () => {
 const Removepunctuation = (txt) => {
         /*  Primeiramente deixa todas as letras maiusculas usando o  "toUpperCase()" para que evite erros.
         Apos isso faz o replaceAll onde mantem todas as letras de A ate Z removendo qualquer pontuação.*/
-        let resultado = txt.toUpperCase().replace(/[^A-Za-z0-9áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑz_[-] ]/gi, " ") 
+        let resultado = txt.toUpperCase().replace(/[^A-Za-z0-9áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑz_ ]/gi, " ") 
         return resultado
 }
 
@@ -68,7 +66,7 @@ const ignoreWord = (txt, ig) => {
     let listig = ig.split("; ")
     listig.forEach((w)=>{
         // console.log(" "+w+" ")
-        resultado = resultado.toUpperCase().replaceAll(" "+w.toUpperCase()+" ".toUpperCase()," ") 
+        resultado = resultado.toUpperCase().replaceAll(" "+w.toUpperCase()+" "," ") 
     })
     // console.log(resultado)
     return resultado;

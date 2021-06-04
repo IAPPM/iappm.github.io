@@ -1,6 +1,5 @@
-import { Page, Text, View ,Document, StyleSheet, Canvas, Image } from '@react-pdf/renderer';
+import { Page, Text, View ,Document, StyleSheet } from '@react-pdf/renderer';
 import {setWorld, setCont}from "./../graph/funcoes"
-import Graph from './../graph/Graph'
 
 const styles = StyleSheet.create({
     page: {
@@ -50,9 +49,9 @@ const styles = StyleSheet.create({
   const MyDocument = props => {
 
     const listWorld = []
-    console.log(props.linkImage)
+    //console.log(props.linkImage)
     setWorld().forEach((w,i)=>{ 
-      let list=[[]]
+      //let list=[[]]
       // console.log(props.state)
       listWorld.push( 
       <View style={{width: '25%', textAlign: "justify", flexDirection: "row" }} key={i} >

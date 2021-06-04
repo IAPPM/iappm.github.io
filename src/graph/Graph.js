@@ -1,7 +1,6 @@
-import { Scale, legend, Title } from 'chart.js';
 import React from 'react'
 import {useState} from "react"
-import { PolarArea, Chart, Bar } from 'react-chartjs-2';
+import { PolarArea } from 'react-chartjs-2';
 import { Switch } from '@material-ui/core';
 const ChartJsImage = require('chartjs-to-image');
 const myChart = new ChartJsImage();

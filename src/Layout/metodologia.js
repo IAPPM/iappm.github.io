@@ -1,9 +1,9 @@
-import {useReducer, useState} from 'react'
+import {useReducer} from 'react'
 import "bulma";
 
 //componentes
 import Form from './../components/form'
-import {Graph, myChart} from './../graph/Graph'
+import {Graph} from './../graph/Graph'
 //graph
 import {dataInicial, reducer, addcont} from "./../graph/data"
 import MyDocument from "./../components/pdfGenerator";
@@ -17,7 +17,7 @@ const Metodologia = props => {
     }
     //Notificação no grafico
     function toggleGraphModal() {
-        document.querySelector('.modal').classList.toggle('is-active');
+        document.querySelector('.plus').classList.toggle('is-active');
         setTimeout(()=>{ document.querySelector('.popup').classList.toggle('hide'); }, 1000)
     }
     return(
@@ -36,7 +36,7 @@ const Metodologia = props => {
                                 <div className="column is-two-fifths">
                                     <Form analisar={gettxt} modal={toggleGraphModal} />
                                 </div>
-                                <div className="column has-text-centered" style={{maxWidth: '75vh', maxHeight: '75vh', margin:'auto' }}>
+                                <div className="column has-text-centered mb-1" style={{maxWidth: '75vh', maxHeight: '75vh', margin:'auto' }}>
                                     <div className="container is-fluid" >
                                         <p className='mb-5 is-size-4' >  </p>
                                         <Graph  data={state} />
@@ -53,7 +53,7 @@ const Metodologia = props => {
                 </div>
            
             
-                <div className="modal">
+                <div className="modal plus">
                 <div className="modal-background " />
                     <div className="modal-content" style={{width: '95%', height: '95%', borderRadius:'25px'}} >  
                         <div className="modal-card"  style={{width: '100%', height: '100%', borderRadius:'25px'}} >

@@ -3,19 +3,24 @@ import './Layout/layout.css'
 // import "bulma";
 
 //pages
-import Header from './Layout/home'
-import Metodologia from './Layout/metodologia'
-import Contato from './Layout/contato'
+import Home from './Views/Home'
 import Login from './Layout/login'
+import {Route} from 'react-router-dom'
+import { useState } from 'react';
 
  
 function App() {
+  
+  const [logged, setlogger] = useState(false)
+
+  const HandleClick = () =>{
+    setlogger(true)
+  }
+
   return (
     <div>
-      <Login />
-      <Header />
-      <Metodologia />
-      <Contato />
+      <Route exact path="/"> <Login click={HandleClick} /> </Route>
+      <Route exact path="/home"> <Home logged={logged}  /> </Route>
     </div>
   );
 }
