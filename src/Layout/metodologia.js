@@ -36,7 +36,7 @@ const Metodologia = props => {
                                 <div className="column is-two-fifths">
                                     <Form analisar={gettxt} modal={toggleGraphModal} />
                                 </div>
-                                <div className="column has-text-centered mb-1" style={{maxWidth: '75vh', maxHeight: '75vh', margin:'auto' }}>
+                                <div className="column has-text-centered" style={{maxWidth: '75vh', maxHeight: '75vh', margin:'auto', marginBottom:'5%' }}>
                                     <div className="container is-fluid" >
                                         <p className='mb-5 is-size-4' >  </p>
                                         <Graph  data={state} />

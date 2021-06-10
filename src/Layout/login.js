@@ -18,7 +18,7 @@ export default function Login(props){
     const authlogin = () => {
         
         login(stateLogin, StatePass).then(
-            () => { props.click(); history.push("/home")},
+            () => { props.click(); history.push("/")},
             
         )
         .catch(

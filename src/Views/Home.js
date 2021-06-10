@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom' //Router
 export default function Home(props){
     let history = useHistory();
     if(props.logged === false){
-        history.push("/");
+        history.push("/Login");
     }
     
     return(

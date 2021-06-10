@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div>
-      <Route exact path="/"> <Login click={HandleClick} /> </Route>
-      <Route exact path="/home"> <Home logged={logged}  /> </Route>
+      <Route exact path="/Login"> <Login click={HandleClick} /> </Route>
+      <Route exact path="/"> <Home logged={logged}  /> </Route>
     </div>
   );
 }
